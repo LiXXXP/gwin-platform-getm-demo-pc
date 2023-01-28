@@ -1,0 +1,261 @@
+/* 左浮动 */
+.lf {
+  float: left;
+}
+
+/* 右浮动 */
+.rt {
+  float: right;
+}
+
+.w-100{
+  width: 100%;
+}
+
+/* 清除浮动 */
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* 间距 */
+.mar-10 {
+  margin: 10px;
+}
+.mar-20 {
+  margin: 20px;
+}
+.pad-10 {
+  padding: 10px;
+}
+.pad-20 {
+  padding: 20px;
+}
+
+/* 字体颜色 */
+.cor-333 {
+  color: #333;
+}
+.cor-666 {
+  color: #666;
+}
+.cor-999 {
+  color: #999;
+}
+.cor-ccc {
+  color: #ccc;
+}
+.cor-fff {
+  color: #fff;
+}
+.cor-6dc {
+  color: #6dca6d;
+}
+.cor-d51 {
+  color: #d51917;
+}
+.cor-09f {
+  color: #0099ff;
+}
+
+/* 背景色*/
+.bg-fff {
+  background-color: #ffffff;
+}
+
+/* 字体大小 */
+.font-10 {
+  font-size: 10px;
+}
+.font-12 {
+  font-size: 12px;
+}
+.font-14 {
+  font-size: 14px;
+}
+.font-16 {
+  font-size: 16px;
+}
+.font-18 {
+  font-size: 18px;
+}
+.font-20 {
+  font-size: 20px;
+}
+
+/* 字体加粗 */
+.font-b {
+  font-weight: bold;
+}
+
+/* 对齐方式 */
+.text-c {
+  text-align: center;
+}
+.text-l {
+  text-align: left;
+}
+.text-r {
+  text-align: right;
+}
+
+/* flex布局 */
+.flex {
+  display: flex;
+  display: -webkit-flex;
+}
+
+.flex-order {
+  /* 属性定义排列顺序 */
+  order: 0;
+}
+
+.flex-grow {
+  /* 属性定义放大比例 */
+  flex-grow: 0;
+}
+
+.flex-shrink {
+  /* 属性定义缩小比例 */
+  flex-shrink: 1;
+}
+
+.flex-shrink {
+  /* 占据的主轴空间 */
+  flex-basis: auto;
+}
+
+.flex-1 {
+  /* flex-grow, flex-shrink 和 flex-basis的简写 */
+  flex: 0 1 auto;
+}
+
+.flex-self {
+  /* 允许单个项目有与其他项目不一样的对齐方式 */
+  align-self: auto;
+}
+
+/* 主轴排列方向 */
+.flex-row {
+  /* 主轴为水平方向，起点在左端 */
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  /* 主轴为水平方向，起点在右端 */
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  /* 主轴为垂直方向，起点在上沿 */
+  flex-direction: column;
+}
+
+.flex-col-reverse {
+  /* 主轴为垂直方向，起点在下沿 */
+  flex-direction: column-reverse;
+}
+
+/* 换行 */
+.flex-nowrap {
+  /* 不换行 */
+  flex-wrap: nowrap;
+}
+
+.flex-wrap {
+  /* 换行，第一行在上方 */
+  flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+  /* 换行，在第一行的下方 */
+  flex-wrap: wrap-reverse;
+}
+
+/* 简写 */
+.flex-flow {
+  flex-flow: row nowrap;
+}
+
+/* 主轴上的对齐方式 */
+.flex-start {
+  /* 左对齐 */
+  justify-content: flex-start;
+}
+
+.flex-end {
+  /* 右对齐 */
+  justify-content: flex-end;
+}
+
+.flex-center {
+  /* 居中 */
+  justify-content: center;
+}
+
+.flex-between {
+  /* 两端对齐 */
+  justify-content: space-between;
+}
+
+.flex-around {
+  /* 两侧间隔相等 */
+  justify-content: space-around;
+}
+
+/* 交叉轴上的对齐方式 */
+.flex-only-start {
+  /* 交叉轴的起点对齐 */
+  align-items: flex-start;
+}
+
+.flex-only-end {
+  /* 交叉轴的终点对齐 */
+  align-items: flex-end;
+}
+
+.flex-only-center {
+  /* 交叉轴的中点对齐 */
+  align-items: center;
+}
+
+.flex-only-baseline {
+  /* 基线对齐 */
+  align-items: baseline;
+}
+
+.flex-only-stretch {
+  /* 未设置高度或auto，将占满整个容器的高度 */
+  align-items: stretch;
+}
+
+/* 多根轴线的对齐方式 */
+.flex-more-start {
+  /* 与交叉轴的起点对齐 */
+  align-content: flex-start;
+}
+
+.flex-more-end {
+  /* 与交叉轴的终点对齐 */
+  align-content: flex-end;
+}
+
+.flex-more-center {
+  /* 与交叉轴的中点对齐 */
+  align-content: center;
+}
+
+.flex-more-between {
+  /* 与交叉轴两端对齐 */
+  align-content: space-between;
+}
+
+.flex-more-around {
+  /* 每根轴线两侧间隔相等 */
+  align-content: space-around;
+}
+
+.flex-more-stretch {
+  /* 轴线占满整个交叉轴 */
+  align-content: stretch;
+}

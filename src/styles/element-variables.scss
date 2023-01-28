@@ -1,0 +1,13 @@
+@forward 'node_modules/element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #3860f4,
+    ),
+  ),
+  $text-color: (
+    'primary': #606A78,
+    'regular': #1A2234
+  )
+);
+
+@use "node_modules/element-plus/theme-chalk/src/index.scss" as *;

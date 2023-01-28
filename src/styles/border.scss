@@ -1,0 +1,87 @@
+$color-border: #e5e5e5;
+@function px2rem($px) {
+  @return $px + rem;
+}
+
+@mixin border-bottom($color: $color-border) {
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(0deg, $color, $color 50%, transparent 50%);
+  }
+
+  @media (min-resolution: 3dppx) {
+    background-image: linear-gradient(0deg, $color, $color 33.333%, transparent 33.333%);
+  }
+}
+
+@mixin border-top($color: $color-border) {
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: top;
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(180deg, $color, $color 50%, transparent 50%);
+  }
+
+  @media (min-resolution: 3dppx) {
+    background-image: linear-gradient(180deg, $color, $color 33.333%, transparent 33.333%);
+  }
+}
+
+@mixin border-left($color: $color-border) {
+  background-size: 1px 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(90deg, $color, $color 50%, transparent 50%);
+  }
+
+  @media (min-resolution: 3dppx) {
+    background-image: linear-gradient(90deg, $color, $color 33.333%, transparent 33.333%);
+  }
+}
+
+@mixin border-right($color: $color-border) {
+  background-size: 1px 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(270deg, $color, $color 50%, transparent 50%);
+  }
+
+  @media (min-resolution: 3dppx) {
+    background-image: linear-gradient(270deg, $color, $color 33.333%, transparent 33.333%);
+  }
+}
+@mixin border-1px($color: $color-border, $radius: 0, $style: solid, $width: 1px) {
+  position: relative;
+  &::after {
+    content: '';
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: 0 0;
+    border: $width $style $color;
+    border-radius: px2rem($radius);
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    @media (min-resolution: 2dppx) {
+      width: 200%;
+      height: 200%;
+      border-radius: px2rem($radius * 2);
+      transform: scale(0.5) translateZ(0);
+    }
+
+    @media (min-resolution: 3dppx) {
+      width: 300%;
+      height: 300%;
+      border-radius: px2rem($radius * 3);
+      transform: scale(0.333) translateZ(0);
+    }
+  }
+}
